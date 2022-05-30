@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Battleship</title>
+        <link href="main.css" rel="stylesheet">
+        <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="media/battleship.svg" id="battleship" alt="battleship">
+            <div id="blackline"></div>
+        </header>
+
+        <div id="gamediv">
+            <div id="windiv">
+                <p id="winp"><span id="winner"></span><br>WINS!</span></p>
+            </div>
+            <canvas id="playerfield" class="field" width="442px" height="442px"></canvas>
+            <canvas id="botfield" class="field" width="442px" height="442px"></canvas>
+        </div>
+
+        <menu id="menu">
+            <div id="musicdiv">
+                <div id="playerdiv">
+                    <audio id="audio" controls autoplay muted>
+                        <source id="source" src="media/track1.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div  id="playlistdiv">
+                    <ul id="playlist">
+                        <li class="playing" id="1">
+                            <a>TRACK 1</a>
+                        </li>
+                        <li class="" id="2">
+                            <a>TRACK 2</a>
+                        </li>
+                        <li class="custom">
+                            <input type="file" id="choosemusic" title=" ">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="buttons">
+                <button type="submit" id="reset">RESET GAME</button>
+                <button onclick="window.location.href='./media/dokumentation.pdf'" type="submit" id="readme">READ ME</button>
+            </div>
+            <div id="botlevel">
+                <p>BOT LEVEL</span></p>
+                <input type="range" min="1" max="100" value="10" class="slider" id="sliderid">
+                <p>VALUE: <span id="result"></span>%</p>
+            </div>
+        </menu>
+        <footer>(C) 2022 Nazar Grigorenko</footer>
+    </body>
+</html>
